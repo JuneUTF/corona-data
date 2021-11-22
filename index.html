@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="JA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20057-フィン</title>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://corona.go.jp/assets/css/other-lang.css">
+    <script src="https://corona.go.jp/assets/js/common.js" defer=""></script>
+    <script src="https://corona.go.jp/assets/js/jquery.magnific-popup.min.js" defer=""></script>
+    <script src="https://corona.go.jp/assets/js/popup-base.js" defer=""></script>
+    <div class="header">
+        <div class="country-map">
+            <button id="vietnam-data" onclick="vietnam()"> Viet Nam</button>
+            <button id="japan-data" onclick="japan()"> japan</button>
+        </div>
+        <div class="langs">
+            <button id="japanes" onclick="japanes()">日本語</button>
+            <button id="tiengviet" onclick="tiengviet()">Tiếng Việt</button>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="vietnam">
+            <div class="timedown">
+            </div>
+            <div class="menu-data" id="vietnam">
+                <div class="data-style">
+                    <div class="data-name">
+                        <div class="name-title"></div>
+                        <div class="name-date"></div>
+                    </div>
+                    <div class="data-list">
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="infected"></div>
+                            </div>
+                            <div class="list-name tongcong"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="treated"></div>
+                                <div class="sosanh">(
+                                    <div id="scnm"></div> )
+                                </div>
+                            </div>
+                            <div class="list-name homnay"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="nmoihqua"></div>
+                            </div>
+                            <div class="list-name homqua"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-style">
+                    <div class="data-name">
+                        <div class="name-title"></div>
+                        <div class="name-date"></div>
+                    </div>
+                    <div class="data-list">
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="recovered"></div>
+                            </div>
+                            <div class="list-name tongcong"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="cakhoimoi"></div>
+                                <div class="sosanh">(
+                                    <div id="sckm"></div> )
+                                </div>
+                            </div>
+                            <div class="list-name homnay"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="cakhoihqua"></div>
+                            </div>
+                            <div class="list-name homqua"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-style">
+                    <div class="data-name">
+                        <div class="name-title"></div>
+                        <div class="name-date"></div>
+                    </div>
+                    <div class="data-list">
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="deceased"></div>
+                            </div>
+                            <div class="list-name tongcong"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="chetmoi"></div>
+                                <div class="sosanh">(
+                                    <div id="sccm"></div>)
+                                </div>
+                            </div>
+                            <div class="list-name homnay"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <div id="chethqua"></div>
+                            </div>
+                            <div class="list-name homqua"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section">
+                    <div id="map">
+                        <div class="data-name map-name">
+                            <div class="name-title"></div>
+                            <div class="name-date"></div>
+                            <div class="hoangsa">
+                                <img src="/maps.svg">
+                                <p>QĐ.Hoàng Sa</p>
+                            </div>
+                            <div class="truongsa">
+                                <img src="/maps.svg">
+                                <p>QĐ.Trường Sa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-data">
+                        <div class="table">
+                            <table id="table">
+                                <tr>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table">
+                            <table id="table1">
+                                <tr>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table">
+                            <table id="table2">
+                                <tr>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CODE NHAT TO VN -->
+        <div id="japan">
+            <div class="menu-data">
+                <div class="data-style">
+                    <div class="data-name">
+                        <div class="name-title"></div>
+                        <div id="japanchart_patients-date"></div>
+                    </div>
+                    <div class="data-list">
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="patients-accumulation"></p>
+                            </div>
+                            <div class="list-name tongcong"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="patients-new"></p>
+                            </div>
+                            <div class="list-name homnay"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="patients-predayNew"></p>
+                            </div>
+                            <div class="list-name homqua"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-style">
+                    <div class="data-name">
+                        <div class="name-title"></div>
+                        <div id="japanchart_cures-date"></div>
+                    </div>
+                    <div class="data-list">
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="cures-accumulation"></p>
+                            </div>
+                            <div class="list-name tongcong"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="cures-new"></p>
+                            </div>
+                            <div class="list-name homnay"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="cures-predayNew"></p>
+                            </div>
+                            <div class="list-name homqua"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-style">
+                    <div class="data-name">
+                        <div class="name-title"></div>
+                        <div id="japanchart_deaths-date"></div>
+                    </div>
+                    <div class="data-list">
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="deaths-accumulation"></p>
+                            </div>
+                            <div class="list-name tongcong"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p id="deaths-new"></p>
+                            </div>
+                            <div class="list-name homnay"></div>
+                        </div>
+                        <div class="list-style">
+                            <div class="list-data">
+                                <p class="japanchartbox-bigLabel" id="deaths-predayNew">+3</p>
+                            </div>
+                            <div class="list-name homqua"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-japan">
+                    <div id="map">
+                        <div class="data-name map-name">
+                            <div class="name-title"></div>
+                            <div id="japanchart_map-date"></div>
+                        </div>
+                        <div id="map-container"></div>
+                    </div>
+                    <div class="japan-contry">
+                        <div class="container grid_container_japanmapchart-col grid_container_japanmapchart-col-1">
+                            <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                            <canvas id="canvas-0" class="chartjs-render-monitor"></canvas>
+                        </div>
+                        <div class="container grid_container_japanmapchart-col grid_container_japanmapchart-col-2">
+                            <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                            <canvas id="canvas-1" class="chartjs-render-monitor"></canvas>
+                        </div>
+                    </div>
+                    <div class="japan-contry">
+                        <div class="container grid_container_japanmapchart-col grid_container_japanmapchart-col-3">
+                            <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                            <canvas id="canvas-2" class="chartjs-render-monitor"></canvas>
+                        </div>
+                        <div class="container grid_container_japanmapchart-col grid_container_japanmapchart-col-4">
+                            <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                            <canvas id="canvas-3" class="chartjs-render-monitor"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://corona.go.jp/dashboard/js/app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- === SCRIPT MAIN JS === -->
+    <script src="main.js"></script>
+    <script src="mapdata.js"></script>
+    <script src="countrymap.js"></script>
+    <script src="other.js"></script>
+    <script src="langs.js"></script>
+</body>
+
+</html>
