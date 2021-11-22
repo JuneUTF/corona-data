@@ -31,7 +31,7 @@ function tiengviet() {
     langes("tongcong", "Lỹ Kế");
     langes("homnay", "Hôm Nay ");
     langes("homqua", "Hôm Qua");
-    let TimeData = ` ${new Date().getDate() }/ ${ new Date().getMonth()+1} /${new Date().getFullYear()}`;
+    let TimeData = ` ${new Date().getDate() }/ ${ new Date().getMonth()+1}`;
     langes('name-date', TimeData);
 }
 
