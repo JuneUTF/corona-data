@@ -31,7 +31,12 @@ function tiengviet() {
     langes("tongcong", "Lỹ Kế");
     langes("homnay", "Hôm Nay ");
     langes("homqua", "Hôm Qua");
-    let TimeData = ` ${new Date().getDate() }/ ${ new Date().getMonth()+1}`;
+    langes("ts", "QĐ.Trường Sa");
+    langes("hs", "QĐ.Hoàng Sa");
+    langes("webs", "Giới Thiệu");
+    langes("virut-data", "Thông Tin Virut")
+
+    let TimeData = ` (  ${new Date().getDate() }/ ${ new Date().getMonth()+1} )`;
     langes('name-date', TimeData);
 }
 
@@ -69,7 +74,11 @@ function japanes() {
     langes("tongcong", "合計");
     langes("homnay", "本日 ");
     langes("homqua", "昨日");
-    let TimeData = `${ new Date().getMonth()+1} 月 ${new Date().getDate() }日`;
+    langes("hs", "黃沙諸島");
+    langes("ts", "長沙諸島");
+    langes("virut-data", "コロナウイルス情報")
+    langes("webs", "Web紹介");
+    let TimeData = `${ new Date().getMonth()+1} 月 ${new Date().getDate() }日 `;
     langes('name-date', TimeData);
 
 
