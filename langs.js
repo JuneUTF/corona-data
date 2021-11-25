@@ -29,8 +29,8 @@ function tiengviet() {
         }
     }
     langes("tongcong", "Lỹ Kế");
-    langes("homnay", "Hôm Nay ");
-    langes("homqua", "Hôm Qua");
+    langes("homnay", "Nhiễm Mới ");
+    langes("homqua", "Hôm Trước");
     langes("ts", "QĐ.Trường Sa");
     langes("hs", "QĐ.Hoàng Sa");
     langes("webs", "Giới Thiệu");
@@ -72,8 +72,8 @@ function japanes() {
         }
     }
     langes("tongcong", "合計");
-    langes("homnay", "本日 ");
-    langes("homqua", "昨日");
+    langes("homnay", "新規 ");
+    langes("homqua", "前日");
     langes("hs", "黃沙諸島");
     langes("ts", "長沙諸島");
     langes("virut-data", "コロナウイルス情報")
