@@ -19,4 +19,4 @@ function japan() {
     let japans = document.getElementById('japan-data')
     japans.style.backgroundColor = 'rgb(59, 74, 96)';
 }
-japan();
+vietnam();
