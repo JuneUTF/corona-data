@@ -417,13 +417,18 @@ rect {
         text-align: center;
     }
     td1 {
-        width: 180px;
+        width: 180px !important;
     }
     td3 {
         width: 45px;
     }
 }
 
-.header {
-    display: none;
+@media screen and (min-width:1230px) {
+    td1 {
+        width: 180px !important;
+    }
+    td3 {
+        width: 45px;
+    }
 }
