@@ -336,7 +336,6 @@ function createTable(detail, key) {
             DataBackGround.style.borderLeftColor = "rgb(255, 255, 255)";
         }
         if (i < 42) { DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 120) + "px" };
-        DataBackGround.style.width = '120px';
         var DataNhiem = document.createElement("td2");
         var DataNhiemMoi = document.createElement("td3");
         DataNhiemMoi.style.color = 'white';
@@ -370,7 +369,6 @@ function createTable(detail, key) {
             DataBackGround.style.borderLeftColor = "rgb(255, 255, 255)";
         }
         DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 120) + "px";
-        DataBackGround.style.width = '120px';
 
         var DataNhiem = document.createElement("td2");
         var DataNhiemMoi = document.createElement("td3");
