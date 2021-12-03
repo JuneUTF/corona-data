@@ -20,3 +20,4 @@ function japan() {
     japans.style.backgroundColor = 'rgb(59, 74, 96)';
 }
 vietnam();
+//JS Text

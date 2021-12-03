@@ -303,7 +303,7 @@ function createTable(detail, key) {
         } else if (detail[i].cases < 301) {
             DataBackGround.style.borderLeftColor = "rgb(255, 255, 255)";
         }
-        if (i < 21) { DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 120) + "px" };
+        if (i < 21) { DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 180) + "px" };
 
         var DataNhiem = document.createElement("td2");
         var DataNhiemMoi = document.createElement("td3");
@@ -335,8 +335,9 @@ function createTable(detail, key) {
         } else if (detail[i].cases < 301) {
             DataBackGround.style.borderLeftColor = "rgb(255, 255, 255)";
         }
-        if (i < 42) { DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 120) + "px" };
+        if (i < 42) { DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 180) + "px" };
         var DataNhiem = document.createElement("td2");
+        DataBackGround.style.width = "180px"
         var DataNhiemMoi = document.createElement("td3");
         DataNhiemMoi.style.color = 'white';
         if (i < 42) { DataNhiemMoi.textContent = `(+ ${detail[i].casesToday} )`; }
@@ -368,8 +369,8 @@ function createTable(detail, key) {
         } else if (detail[i].cases < 301) {
             DataBackGround.style.borderLeftColor = "rgb(255, 255, 255)";
         }
-        DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 120) + "px";
-
+        DataBackGround.style.borderLeftWidth = ((detail[i].cases / detail[0].cases) * 180) + "px";
+        DataBackGround.style.width = "180px"
         var DataNhiem = document.createElement("td2");
         var DataNhiemMoi = document.createElement("td3");
         DataNhiemMoi.style.color = 'white';
