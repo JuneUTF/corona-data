@@ -16,9 +16,9 @@
     <script src="https://corona.go.jp/assets/js/popup-base.js" defer=""></script>
     <div class="header">
         <div class="country-map">
-            <button id="vietnam-data" onclick="vietnam()"></button>
-            <button id="japan-data" onclick="japan()"></button>
-            <button class="virut-data" onclick="johou()"> </button>
+            <button id="vietnam-data" class="vietnam-data" onclick="vietnam()"></button>
+            <button id="japan-data" onclick="japan()" class="japan-data"></button>
+            <button class="virut-data" onclick="showvirut()"> </button>
         </div>
         <div class="waviy">
             <span style="--i:1">2</span>
@@ -34,9 +34,38 @@
 
         </div>
         <div class="langs">
-            <button class="webs" onclick="syoukai()"></button>
+            <button class="webs" onclick="showapi()"></button>
             <button id="japanes" onclick="japanes()">日本語</button>
             <button id="tiengviet" onclick="tiengviet()">Tiếng Việt</button>
+        </div>
+    </div>
+    <div id="headermobile">
+        <div class="showmenu">
+            <div class="waviy">
+                <span style="--i:1">2</span>
+                <span style="--i:2">0</span>
+                <span style="--i:3">0</span>
+                <span style="--i:4">5</span>
+                <span style="--i:5">7</span>
+                <span style="--i:6">-</span>
+                <span style="--i:7">フ</span>
+                <span style="--i:8">ィ</span>
+                <span style="--i:9">ン</span>
+                <span style="--i:10"> ！</span>
+            </div>
+            <div id="showmenu-btn">
+                <button id="showmenubtn" onclick="showmenu()"><img src="./menu.svg" alt="" srcset=""></button>
+            </div>
+        </div>
+        <div class="country-map">
+            <button id="vietnam-data" class="vietnam-data" onclick="vietnam(),activedlt()"></button>
+            <button id="japan-data" class="japan-data" onclick="japan(),activedlt()"></button>
+            <button class="virut-data" onclick="showvirut(),activedlt()"> </button>
+        </div>
+        <div class="langs">
+            <button class="webs" onclick="showapi(),activedlt()"></button>
+            <button id="japanes" onclick="japanes(),activedlt()">日本語</button>
+            <button id="tiengviet" onclick="tiengviet(),activedlt()">Tiếng Việt</button>
         </div>
     </div>
     <div id="menu">
@@ -316,6 +345,26 @@
     </div>
     <script src="https://corona.go.jp/dashboard/js/app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <div class="show-tt" id="apiweb">
+        <div class="show-active">
+            <h1 class="virut-data"></h1>
+            <button onclick="btndlt()"> X</button>
+        </div>
+        <div class="show-text text-virut">
+        </div>
+    </div>
+    <div class="show-tt" id="apivirut">
+        <div class="show-active">
+            <h1 class="webs"></h1>
+            <button onclick="btndlt()"> X</button>
+        </div>
+        <div class="show-text text-web">
+            <p>- ngay <span>xxx</span>xx ghi nhan ca nhiem dau tien o ha nam trung quoc.</p>
+            <p>-tinh den ngay lll trai qua xx ngay the gioi ghi nhan tong cong xxx ca nhiem va xxx ca tu vong</p>
+            <p>-Ngay xxx nhat ban va viet nam deu cong bo ca nhiem moi dau tien trong nuoc</p>
+            <p>- tinh den ngay llltrai qua xxx ngay o nhat ghi nham 111 ca nhiem va 111 ca tu vong, trong ki viet nam laf 222 ca nhiem va 222 ca tu vong</p>
+        </div>
+    </div>
     <!-- === SCRIPT MAIN JS === -->
     <script src="main.js"></script>
     <script src="mapdata.js"></script>

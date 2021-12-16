@@ -1,463 +1,581 @@
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            
-            body {
-                color: yellow !important;
-                background-color: #2c3b4d;
-            }
-            
-            #map {
-                width: 100% !important;
-                border: 0.5px solid white;
-                position: relative;
-                text-align: center;
-            }
-            
-            #map p {
-                font-size: 12px;
-                font-weight: 400;
-            }
-            
-            .truongsa {
-                position: absolute;
-                bottom: 0%;
-                right: 50%;
-                transform: translate(220px, -20px);
-                text-align: center;
-            }
-            
-            .hoangsa {
-                position: absolute;
-                top: 50%;
-                right: 50%;
-                transform: translate(180px, 5px);
-                text-align: center;
-            }
-            
-            #map_legend {
-                position: absolute;
-                display: inline;
-                top: 160px;
-                justify-content: center;
-                font-size: 15px;
-                height: 120px;
-                width: 180px;
-                font-family: 游ゴシック体;
-            }
-            
-            #map_holder {
-                display: inline-block;
-            }
-            
-            .section {
-                display: grid;
-                grid-template-columns: 1fr 2fr;
-            }
-            
-            .table-data {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            
-            .table {
-                border: 0.5px solid white;
-            }
-            
-            table {
-                display: block;
-                margin: 5px;
-                position: relative;
-                text-align: center;
-                justify-content: center;
-            }
-            
-            td,
-            th {
-                width: 100px;
-                height: 15px;
-                line-height: 20px;
-            }
-            
-            td2 {
-                position: absolute;
-                left: 160px;
-                margin-top: -17px;
-                line-height: 20px;
-            }
-            
-            td3 {
-                position: absolute;
-                left: 220px;
-                margin-top: -17px;
-                line-height: 20px;
-                width: 45px;
-            }
-            
-            td1 {
-                height: 15px;
-                background-color: rgb(59, 74, 96);
-                border-left-style: solid;
-                display: block;
-            }
-            
-            #table,
-            #table1,
-            #table2 {
-                font-size: 10px;
-                display: inline-block;
-            }
-            
-            .information__container {
-                margin-bottom: 4rem;
-                display: flex;
-                justify-content: center;
-                display: none;
-            }
-            
-            .information__data {
-                text-align: center;
-                margin-right: 2rem;
-            }
-            
-            #map_zoom {
-                display: none;
-            }
-            
-            #map_inner {
-                text-align: left !important;
-            }
-            
-            rect {
-                stroke: none !important;
-            }
-            
-            #menu {
-                border: 0.5px solid white;
-                font-family: 游ゴシック体;
-                font-weight: 700;
-            }
-            
-            .menu-data {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            
-            .data-style {
-                border: 0.5px solid white;
-                padding: 5px;
-            }
-            
-            .data-name {
-                display: grid;
-                grid-template-columns: 75% 25%;
-                margin: 0 10px;
-                font-size: 15px;
-            }
-            
-            .name-title {
-                font-weight: 700px;
-                font-size: 15px;
-                display: flex;
-            }
-            
-            .map-name {
-                margin-bottom: 15px;
-            }
-            
-            .name-title::after {
-                content: "";
-                -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                flex-grow: 1;
-                border-bottom: 1px solid #3d4c5c;
-                margin-bottom: 10px;
-            }
-            
-            .name-date4 {
-                font-size: 15px;
-                text-align: right;
-            }
-            
-            .menu-data .data-style .data-list {
-                display: grid;
-                grid-template-columns: 40% 30% 30%;
-                margin: 10px;
-            }
-            
-            .menu-data .data-style .data-list .list-data {
-                font-size: 26px;
-                display: flex;
-                padding: 0 5px;
-                position: relative;
-            }
-            
-            #chetmoi {
-                text-align: right !important;
-            }
-            
-            .menu-data .data-style .data-list .list-name {
-                text-align: left;
-                padding-left: 5% !important;
-                font-size: 13px;
-            }
-            
-            .menu-data .data-style .data-list .sum {
-                /* color: #84d5ff; */
-            }
-            
-            .sosanh {
-                font-size: 10px;
-                display: flex;
-                margin: 5px;
-                line-height: 20px;
-            }
-            
-            .page-container main .japan_chartbox {
-                /* background-color: #2c3b4d; */
-                margin: .1rem;
-            }
-            
-            .lang-other_contents {
-                background: none !important;
-                padding: 0px !important;
-            }
-            
-            .lang-other_contents .cont-border {
-                background: #fff;
-                border: 0px !important;
-                padding: 0px !important;
-            }
-            
-            .inner {
-                max-width: 100% !important;
-                margin: 0 auto;
-                padding: 0 !important;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-            }
-            
-            .section-japan {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            
-            .japan-contry {
-                border: 0.5px solid #FFF;
-                height: 100% !important;
-            }
-            
-            #canvas-0,
-            #canvas-1,
-            #canvas-2,
-            #canvas-3 {
-                width: 90% !important;
-                line-height: 100px !important;
-            }
-            /* CSS Header */
-            
-            .header {
-                height: 60px;
-                width: 100%;
-                display: flex;
-                position: relative;
-            }
-            
-            .header .country-map {
-                display: flex;
-                height: 100%;
-                line-height: 60px;
-            }
-            
-            .header .langs {
-                display: flex;
-                height: 100%;
-                line-height: 60px;
-                position: absolute;
-                right: 0;
-            }
-            
-            .header .country-map button:nth-child(1) {
-                clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
-                width: 200px;
-                padding-left: 10px;
-                border: none;
-                color: #FFF;
-            }
-            
-            .header .country-map button:nth-child(2) {
-                clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%);
-                width: 200px;
-                margin-left: -40px;
-                padding-left: 10px;
-                color: #FFF;
-                border: none;
-            }
-            
-            .header .country-map button:nth-child(3) {
-                clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%);
-                width: 200px;
-                margin-left: -40px;
-                padding-left: 10px;
-                color: #FFF;
-                border: none;
-            }
-            
-            .header .langs button:nth-child(1) {
-                clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0 100%);
-                width: 200px;
-                padding-left: 10px;
-                color: #FFF;
-                margin-right: -40px;
-                border: none;
-            }
-            
-            .header .langs button:nth-child(2) {
-                clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0 100%);
-                width: 200px;
-                padding-left: 10px;
-                color: #FFF;
-                border: none;
-            }
-            
-            .header .langs button:nth-child(3) {
-                clip-path: polygon(25% 0, 100% 1%, 100% 100%, 0 100%);
-                width: 200px;
-                margin-left: -40px;
-                padding-left: 10px;
-                color: #FFF;
-                border: none;
-            }
-            /* timedown */
-            
-            .text-times {
-                display: flex;
-            }
-            
-            .chartjs-render-monitor {
-                width: 100%;
-            }
-            
-            #times {
-                display: inline-flex;
-            }
-            
-            .timedown {
-                display: block;
-                width: 100%;
-                text-align: left;
-                border: 0.5px solid #FFF;
-            }
-            /* mobile */
-            
-            @media screen and (max-width:768px) {
-                .menu-data,
-                .section,
-                .table-data,
-                .section-japan {
-                    display: inline-block;
-                    width: 100%;
-                    text-align: center;
-                }
-                #map_legend {
-                    display: none;
-                }
-                .truongsa {
-                    position: absolute;
-                    bottom: 0%;
-                    right: 50%;
-                    transform: translate(180px, -20px);
-                    text-align: center;
-                }
-                .hoangsa {
-                    position: absolute;
-                    top: 50%;
-                    right: 50%;
-                    transform: translate(160px, 5px);
-                    text-align: center;
-                }
-                td1 {
-                    width: 260px !important;
-                }
-                td3 {
-                    left: 300px;
-                }
-                .menu-data .data-style .data-list .list-data {
-                    font-size: 20px;
-                }
-            }
-            /* Ipad pro */
-            
-            @media screen and (max-width:1024px) {
-                td1 {
-                    width: 100px;
-                }
-            }
-            /* laptop */
-            
-            @media screen and (max-width:1230px) {
-                .menu-data,
-                .section,
-                .section-japan {
-                    display: inline-block;
-                    width: 100%;
-                    text-align: center;
-                }
-                td1 {
-                    width: 180px !important;
-                }
-                td3 {
-                    width: 45px;
-                }
-            }
-            
-            @media screen and (min-width:1230px) {
-                .waviy {
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    text-align: center;
-                    justify-content: center;
-                    align-items: center;
-                    line-height: 40px;
-                    margin-top: 10px;
-                }
-            }
-            /* CSS Text */
-            
-            @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-            .waviy {
-                -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
-                font-size: 25px;
-            }
-            
-            .waviy span {
-                font-family: 'Alfa Slab One', cursive;
-                position: relative;
-                display: inline-block;
-                color: red;
-                text-transform: uppercase;
-                animation: waviy 1s infinite;
-                animation-delay: calc(.1s * var(--i));
-            }
-            
-            @keyframes waviy {
-                0%,
-                40%,
-                100% {
-                    transform: translateY(0)
-                }
-                20% {
-                    transform: translateY(-20px)
-                }
-            }
-            
-            .huynh {}
-            
-            .virut-data,
-            .webs {
-                background-color: #b2bcc9;
-            }
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ body {
+     color: yellow !important;
+     background-color: #2c3b4d;
+ }
+ 
+ #map {
+     width: 100% !important;
+     border: 0.5px solid white;
+     position: relative;
+     text-align: center;
+ }
+ 
+ #map p {
+     font-size: 12px;
+     font-weight: 400;
+ }
+ 
+ .truongsa {
+     position: absolute;
+     bottom: 0%;
+     right: 50%;
+     transform: translate(220px, -20px);
+     text-align: center;
+ }
+ 
+ .hoangsa {
+     position: absolute;
+     top: 50%;
+     right: 50%;
+     transform: translate(180px, 5px);
+     text-align: center;
+ }
+ 
+ #map_legend {
+     position: absolute;
+     display: inline;
+     top: 160px;
+     justify-content: center;
+     font-size: 15px;
+     height: 120px;
+     width: 180px;
+     font-family: 游ゴシック体;
+ }
+ 
+ #map_holder {
+     display: inline-block;
+ }
+ 
+ .section {
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+ }
+ 
+ .table-data {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+ }
+ 
+ .table {
+     border: 0.5px solid white;
+ }
+ 
+ table {
+     display: block;
+     margin: 5px;
+     position: relative;
+     text-align: center;
+     justify-content: center;
+ }
+ 
+ td,
+ th {
+     width: 100px;
+     height: 15px;
+     line-height: 20px;
+ }
+ 
+ td2 {
+     position: absolute;
+     left: 160px;
+     margin-top: -17px;
+     line-height: 20px;
+ }
+ 
+ td3 {
+     position: absolute;
+     left: 220px;
+     margin-top: -17px;
+     line-height: 20px;
+     width: 45px;
+ }
+ 
+ td1 {
+     height: 15px;
+     background-color: rgb(59, 74, 96);
+     border-left-style: solid;
+     display: block;
+ }
+ 
+ #table,
+ #table1,
+ #table2 {
+     font-size: 10px;
+     display: inline-block;
+ }
+ 
+ .information__container {
+     margin-bottom: 4rem;
+     display: flex;
+     justify-content: center;
+     display: none;
+ }
+ 
+ .information__data {
+     text-align: center;
+     margin-right: 2rem;
+ }
+ 
+ #map_zoom {
+     display: none;
+ }
+ 
+ #map_inner {
+     text-align: left !important;
+ }
+ 
+ rect {
+     stroke: none !important;
+ }
+ 
+ #menu {
+     border: 0.5px solid white;
+     font-family: 游ゴシック体;
+     font-weight: 700;
+ }
+ 
+ .menu-data {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+ }
+ 
+ .data-style {
+     border: 0.5px solid white;
+     padding: 5px;
+ }
+ 
+ .data-name {
+     display: grid;
+     grid-template-columns: 75% 25%;
+     margin: 0 10px;
+     font-size: 15px;
+ }
+ 
+ .name-title {
+     font-weight: 700px;
+     font-size: 15px;
+     display: flex;
+ }
+ 
+ .map-name {
+     margin-bottom: 15px;
+ }
+ 
+ .name-title::after {
+     content: "";
+     -webkit-box-flex: 1;
+     -ms-flex-positive: 1;
+     flex-grow: 1;
+     border-bottom: 1px solid #3d4c5c;
+     margin-bottom: 10px;
+ }
+ 
+ .name-date4 {
+     font-size: 15px;
+     text-align: right;
+ }
+ 
+ .menu-data .data-style .data-list {
+     display: grid;
+     grid-template-columns: 40% 30% 30%;
+     margin: 10px;
+ }
+ 
+ .menu-data .data-style .data-list .list-data {
+     font-size: 26px;
+     display: flex;
+     padding: 0 5px;
+     position: relative;
+ }
+ 
+ #chetmoi {
+     text-align: right !important;
+ }
+ 
+ .menu-data .data-style .data-list .list-name {
+     text-align: left;
+     padding-left: 5% !important;
+     font-size: 13px;
+ }
+ 
+ .menu-data .data-style .data-list .sum {
+     /* color: #84d5ff; */
+ }
+ 
+ .sosanh {
+     font-size: 10px;
+     display: flex;
+     margin: 5px;
+     line-height: 20px;
+ }
+ 
+ .page-container main .japan_chartbox {
+     /* background-color: #2c3b4d; */
+     margin: .1rem;
+ }
+ 
+ .lang-other_contents {
+     background: none !important;
+     padding: 0px !important;
+ }
+ 
+ .lang-other_contents .cont-border {
+     background: #fff;
+     border: 0px !important;
+     padding: 0px !important;
+ }
+ 
+ .inner {
+     max-width: 100% !important;
+     margin: 0 auto;
+     padding: 0 !important;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+ 
+ .section-japan {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+ }
+ 
+ .japan-contry {
+     border: 0.5px solid #FFF;
+     height: 100% !important;
+ }
+ 
+ #canvas-0,
+ #canvas-1,
+ #canvas-2,
+ #canvas-3 {
+     width: 90% !important;
+     line-height: 100px !important;
+ }
+ /* CSS Header */
+ 
+ .header {
+     height: 60px;
+     width: 100%;
+     display: flex;
+     position: relative;
+ }
+ 
+ .header .country-map {
+     display: flex;
+     height: 100%;
+     line-height: 60px;
+ }
+ 
+ .header .langs {
+     display: flex;
+     height: 100%;
+     line-height: 60px;
+     position: absolute;
+     right: 0;
+ }
+ 
+ .header .country-map button:nth-child(1) {
+     clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
+     width: 200px;
+     padding-left: 10px;
+     border: none;
+     color: #FFF;
+ }
+ 
+ .header .country-map button:nth-child(2) {
+     clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%);
+     width: 200px;
+     margin-left: -40px;
+     padding-left: 10px;
+     color: #FFF;
+     border: none;
+ }
+ 
+ .header .country-map button:nth-child(3) {
+     clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%);
+     width: 200px;
+     margin-left: -40px;
+     padding-left: 10px;
+     color: #FFF;
+     border: none;
+ }
+ 
+ .header .langs button:nth-child(1) {
+     clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0 100%);
+     width: 200px;
+     padding-left: 10px;
+     color: #FFF;
+     margin-right: -40px;
+     border: none;
+ }
+ 
+ .header .langs button:nth-child(2) {
+     clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0 100%);
+     width: 200px;
+     padding-left: 10px;
+     color: #FFF;
+     border: none;
+ }
+ 
+ .header .langs button:nth-child(3) {
+     clip-path: polygon(25% 0, 100% 1%, 100% 100%, 0 100%);
+     width: 200px;
+     margin-left: -40px;
+     padding-left: 10px;
+     color: #FFF;
+     border: none;
+ }
+ /* timedown */
+ 
+ .text-times {
+     display: flex;
+ }
+ 
+ .chartjs-render-monitor {
+     width: 100%;
+ }
+ 
+ #times {
+     display: inline-flex;
+ }
+ 
+ .timedown {
+     display: block;
+     width: 100%;
+     text-align: left;
+     border: 0.5px solid #FFF;
+ }
+ 
+ .show-tt {
+     animation: show 1s forwards;
+     width: 600px;
+     height: 400px;
+     background-color: #b2bcc9;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     z-index: 3;
+     transform: translate(-50%, -50%);
+     border: 0.5px solid #fff;
+     display: none;
+ }
+ 
+ @keyframes show {
+     0% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+ }
+ 
+ .show-tt .show-active {
+     display: flex;
+     height: 40px;
+     line-height: 40px;
+     border: 0.5px solid #fff;
+     position: relative;
+     color: red;
+ }
+ 
+ .show-tt .show-active button {
+     position: absolute;
+     right: 0;
+     font-size: 25px;
+     width: 38px;
+     height: 38px;
+     line-height: 38px;
+ }
+ 
+ .show-tt .show-text {
+     height: 360px;
+     border: 0.5px solid #fff;
+     padding: 15px;
+     font-size: 18px;
+     color: black;
+ }
+ 
+ .show-tt .show-text p {
+     padding: 5px;
+     line-height: 25px;
+ }
+ 
+ .show-tt .show-text span {
+     color: red;
+ }
+ /* mobile */
+ 
+ @media screen and (max-width:768px) {
+     .menu-data,
+     .section,
+     .table-data,
+     .section-japan {
+         display: inline-block;
+         width: 100%;
+         text-align: center;
+     }
+     #map_legend {
+         display: none;
+     }
+     .truongsa {
+         position: absolute;
+         bottom: 0%;
+         right: 50%;
+         transform: translate(180px, -20px);
+         text-align: center;
+     }
+     .hoangsa {
+         position: absolute;
+         top: 50%;
+         right: 50%;
+         transform: translate(160px, 5px);
+         text-align: center;
+     }
+     td1 {
+         width: 260px !important;
+     }
+     td3 {
+         left: 300px;
+     }
+     .menu-data .data-style .data-list .list-data {
+         font-size: 20px;
+     }
+ }
+ /* Ipad pro */
+ 
+ @media screen and (max-width:1024px) {
+     td1 {
+         width: 100px;
+     }
+ }
+ /* laptop */
+ 
+ @media screen and (max-width:1230px) {
+     .menu-data,
+     .section,
+     .section-japan {
+         display: inline-block;
+         width: 100%;
+         text-align: center;
+     }
+     td1 {
+         width: 180px !important;
+     }
+     td3 {
+         width: 45px;
+     }
+     #headermobile .waviy {
+         padding-top: 10px;
+     }
+     .showmenu {
+         position: relative;
+         display: flex;
+     }
+     .showmenu>#showmenu-btn button {
+         position: absolute;
+         right: 0;
+         top: 0;
+         background-color: #FFF;
+         width: 50px;
+         height: 50px;
+     }
+     #headermobile button,
+     #headermobile .waviy {
+         width: 100%;
+         height: 50px;
+         color: wheat;
+         background-color: #3d4c5c;
+         border: 1px solid white;
+     }
+     .activedlt {
+         animation: activedlt 0.5s forwards;
+     }
+     .active {
+         animation: active 0.5s forwards;
+         overflow: none;
+     }
+     @keyframes active {
+         0% {
+             height: 50px;
+         }
+         100% {
+             height: 345px;
+         }
+     }
+     @keyframes activedlt {
+         0% {
+             height: 345px;
+         }
+         100% {
+             height: 50px;
+         }
+     }
+     #headermobile {
+         display: block;
+         height: 50px;
+         overflow: hidden;
+     }
+     .header {
+         display: none;
+     }
+ }
+ 
+ @media screen and (min-width:1230px) {
+     .waviy {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         line-height: 40px;
+         margin-top: 10px;
+     }
+     #headermobile {
+         display: none;
+     }
+     .header {
+         display: flex;
+     }
+ }
+ /* CSS Text */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+ .waviy {
+     -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+     font-size: 25px;
+ }
+ 
+ .waviy span {
+     font-family: 'Alfa Slab One', cursive;
+     position: relative;
+     display: inline-block;
+     color: red;
+     text-transform: uppercase;
+     animation: waviy 1s infinite;
+     animation-delay: calc(.1s * var(--i));
+ }
+ 
+ @keyframes waviy {
+     0%,
+     40%,
+     100% {
+         transform: translateY(0)
+     }
+     20% {
+         transform: translateY(-20px)
+     }
+ }
+ 
+ .huynh {}
+ 
+ .virut-data,
+ .webs {
+     background-color: #b2bcc9;
+ }

@@ -20,4 +20,42 @@ function japan() {
     japans.style.backgroundColor = 'rgb(59, 74, 96)';
 }
 vietnam();
-//JS Text
+//JS Text;
+//JS btn menu
+function showmenu() {
+    let showmenubtn = document.getElementById('showmenubtn');
+    let showmenu = document.getElementById('headermobile');
+    let i = document.querySelector('.active');
+    showmenu.classList.toggle('active');
+    if (i == null) {
+        showmenubtn.innerHTML = `<img src="./menu-active.svg">`;
+        showmenu.classList.remove('activedlt');
+
+    } else {
+        showmenu.classList.add('activedlt');
+        showmenubtn.innerHTML = `<img src="./menu.svg">`;
+
+    }
+}
+//Xoa active animation
+function activedlt() {
+    let showmenu = document.getElementById('headermobile');
+    showmenu.classList.remove('active');
+    showmenu.classList.add('activedlt')
+}
+//xoa menu show 
+function btndlt() {
+    document.getElementById('apivirut').style.display = 'none';
+    document.getElementById('apiweb').style.display = 'none';
+}
+//active showvirut
+function showvirut() {
+    document.getElementById('apivirut').style.display = 'none';
+    document.getElementById('apiweb').style.display = 'block';
+}
+//active showapi
+function showapi() {
+    document.getElementById('apiweb').style.display = 'none';
+    document.getElementById('apivirut').style.display = 'block';
+
+}
