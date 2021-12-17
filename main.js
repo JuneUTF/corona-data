@@ -35,10 +35,12 @@ async function main() {
     createChart(catuvong, "Số ca tử vong", "#666", "tuvongChart");
 }
 
-function createData(infected, treated, recovered, deceased) {
+function createData(infected, treated, recovered, deceased, tongvn, catuvn) {
     document.getElementById("infected").textContent = infected.toLocaleString("en-US");
+    document.getElementById("tongvn").textContent = infected.toLocaleString("en-US");
     document.getElementById("recovered").textContent = recovered.toLocaleString("en-US");
     document.getElementById("deceased").textContent = deceased.toLocaleString("en-US");
+    document.getElementById("catuvn").textContent = deceased.toLocaleString("en-US");
 }
 
 

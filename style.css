@@ -394,7 +394,7 @@
  }
  
  .show-tt .show-text {
-     height: 360px;
+     height: auto;
      border: 0.5px solid #fff;
      padding: 15px;
      font-size: 18px;
@@ -403,7 +403,7 @@
  
  .show-tt .show-text p {
      padding: 5px;
-     line-height: 25px;
+     line-height: 35px;
  }
  
  .show-tt .show-text span {
@@ -499,6 +499,13 @@
      .active {
          animation: active 0.5s forwards;
          overflow: none;
+     }
+     .show-tt {
+         height: auto;
+         width: 85%;
+     }
+     .show-tt .show-text {
+         height: auto;
      }
      @keyframes active {
          0% {

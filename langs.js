@@ -9,10 +9,8 @@ function tiengviet() {
     // let JapanData = document.querySelector('#japan-data');
     // VietnamData.textContent = 'Việt Nam';
     // JapanData.textContent = 'Nhật Bản';
-    // Số Ngày Nhiễm
-    var day = Math.floor(((new Date().getTime()) - (new Date("jan 23,2020 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
-    let TimeDown = document.querySelector('.timedown');
     // Bảng Nhiễm theo ngày
+
     let NameTitle = document.getElementsByClassName("name-title");
     NameTitle[0].textContent = "Số Người Nhiễm Virut Corona";
     NameTitle[1].textContent = "Số Người Xuất Viện";
@@ -37,14 +35,19 @@ function tiengviet() {
     langes("hs", "QĐ.Hoàng Sa");
     langes("webs", "Giới Thiệu");
     langes("virut-data", "Thông Tin Virut")
+        // Số Ngày Nhiễm
+    let DayWorld = Math.floor(((new Date().getTime()) - (new Date("dec 08,2019 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
+    let DayVN = Math.floor(((new Date().getTime()) - (new Date("jan 23,2020 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
+    let DayJP = Math.floor(((new Date().getTime()) - (new Date("may 08,2020 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
     let TimeData = ` (  ${new Date().getDate() }/${ new Date().getMonth()+1} )`;
+    let SumJP = document.getElementById('patients-accumulation').outerText;
+    console.log(SumJP);
     langes('name-date', TimeData);
     langes("text-virut", `
-    <p>- Ngày <span>8/12/2019</span>ghi nhận ca nhiễm đầu tiên là một người <span>đàn ông</span> sinh sống ở <span>TP.Vũ Hán (Trung Quốc)</span>.</p>
-    <p>- Tính đến ngày <span>${TimeData}</span> cả thế giới ghi nhiềm <span>XXX</span> ca nhiễm và <span>xxx</span> ca tử vong </p>
-    <p>- Ngày <span></p>
-    <p>- tinh den ngay llltrai qua xxx ngay o nhat ghi nham 111 ca nhiem va 111 ca tu vong, trong ki viet nam laf 222 ca nhiem va 222 ca tu vong</p>
-    <p>- Ngày <span>8/5/2020 Nhật Bản</span> công bố ca nhiễm corona đầu tiên, trải qua <span>XXX</span> ghi nhận <p id="patients-accumulation"></p></p>`)
+    <p>- Ngày <span>8/12/2019 </span>ghi nhận ca nhiễm đầu tiên là một người <span>đàn ông</span> sinh sống ở <span>TP.Vũ Hán (Trung Quốc)</span>.</p>
+    <p>- Tính đến ngày <span>${TimeData}</span> trải qua <span> ${DayWorld} </span> ngày cả thế giới ghi nhận <span>XXX</span> ca nhiễm và <span>xxx</span> ca tử vong </p>
+    <p>- Ngày <span> 23/1/2020 Việt Nam</span> nghi nhận ca nhiễm đầu tiên, trải qua <span>${DayVN} </span> ngày cả nước ghi nhận <span id="tongvn"></span> ca nhiễm và <span id="catuvn"></span> ca tử vong.</p>
+    <p>- Ngày <span>8/5/2020 Nhật Bản</span> công bố ca nhiễm corona đầu tiên, trải qua <span>${DayJP}</span> ngày ghi nhận <span>xxx</span> ca nhiễm và <span>xxx</span> ca tử vong.</p>`)
 }
 
 // tiếng nhật

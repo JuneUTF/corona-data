@@ -23,9 +23,9 @@ vietnam();
 //JS Text;
 //JS btn menu
 function showmenu() {
-    let showmenubtn = document.getElementById('showmenubtn');
     let showmenu = document.getElementById('headermobile');
     let i = document.querySelector('.active');
+    let showmenubtn = document.getElementById('showmenubtn');
     showmenu.classList.toggle('active');
     if (i == null) {
         showmenubtn.innerHTML = `<img src="./menu-active.svg">`;
@@ -41,7 +41,9 @@ function showmenu() {
 function activedlt() {
     let showmenu = document.getElementById('headermobile');
     showmenu.classList.remove('active');
-    showmenu.classList.add('activedlt')
+    showmenu.classList.add('activedlt');
+    let showmenubtn = document.getElementById('showmenubtn');
+    showmenubtn.innerHTML = `<img src="./menu.svg">`;
 }
 //xoa menu show 
 function btndlt() {
