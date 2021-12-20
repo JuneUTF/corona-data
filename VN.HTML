@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="waviy" id="colorlogo">
+        <span style="--i:1">2</span>
+        <span style="--i:2">0</span>
+        <span style="--i:3">0</span>
+        <span style="--i:4">5</span>
+        <span style="--i:5">7</span>
+        <span style="--i:6">-</span>
+        <span style="--i:7">フ</span>
+        <span style="--i:8">ィ</span>
+        <span style="--i:9">ン</span>
+        <span style="--i:10">-</span>
+        <span style="--i:11">2</span>
+        <span style="--i:12">年</span>
+        <span style="--i:13">生</span>
+        <span style="--i:14">-</span>
+        <span style="--i:15">P</span>
+        <span style="--i:16">M</span>
+    </div>
+    <script>
+        let colorName = ["red", "orange", "yellow", "lime", "green", "teal", "moccasin", "SlateBlue", "Coral", "MediumTurquoise", "Sienna", "snow"];
+        let ColorLogo;
+        setInterval(() => {
+            ColorLogo = colorName[Math.floor(Math.random() * colorName.length)];
+            document.getElementById('colorlogo').style.color = ColorLogo;
+            console.log(ColorLogo);
+        }, 2000)
+    </script>
+    <style>
+        #colorlogo {
+            color: red;
+            animation-delay: 2s;
+        }
+    </style>
+</body>
+
+</html>

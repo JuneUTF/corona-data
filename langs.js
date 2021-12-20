@@ -4,13 +4,6 @@ function tiengviet() {
     let Japannes = document.getElementById('japanes');
     TiengViet.style.backgroundColor = 'rgb(59, 74, 96)';
     Japannes.style.backgroundColor = '#b2bcc9';
-    //btn quốc gia
-    // let VietnamData = document.querySelector('#vietnam-data');
-    // let JapanData = document.querySelector('#japan-data');
-    // VietnamData.textContent = 'Việt Nam';
-    // JapanData.textContent = 'Nhật Bản';
-    // Bảng Nhiễm theo ngày
-
     let NameTitle = document.getElementsByClassName("name-title");
     NameTitle[0].textContent = "Số Người Nhiễm Virut Corona";
     NameTitle[1].textContent = "Số Người Xuất Viện";
@@ -40,14 +33,12 @@ function tiengviet() {
     let DayVN = Math.floor(((new Date().getTime()) - (new Date("jan 23,2020 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
     let DayJP = Math.floor(((new Date().getTime()) - (new Date("may 08,2020 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
     let TimeData = ` (  ${new Date().getDate() }/${ new Date().getMonth()+1} )`;
-    let SumJP = document.getElementById('patients-accumulation').outerText;
-    console.log(SumJP);
     langes('name-date', TimeData);
     langes("text-virut", `
     <p>- Ngày <span>8/12/2019 </span>ghi nhận ca nhiễm đầu tiên là một người <span>đàn ông</span> sinh sống ở <span>TP.Vũ Hán (Trung Quốc)</span>.</p>
-    <p>- Tính đến ngày <span>${TimeData}</span> trải qua <span> ${DayWorld} </span> ngày cả thế giới ghi nhận <span>XXX</span> ca nhiễm và <span>xxx</span> ca tử vong </p>
-    <p>- Ngày <span> 23/1/2020 Việt Nam</span> nghi nhận ca nhiễm đầu tiên, trải qua <span>${DayVN} </span> ngày cả nước ghi nhận <span id="tongvn"></span> ca nhiễm và <span id="catuvn"></span> ca tử vong.</p>
-    <p>- Ngày <span>8/5/2020 Nhật Bản</span> công bố ca nhiễm corona đầu tiên, trải qua <span>${DayJP}</span> ngày ghi nhận <span>xxx</span> ca nhiễm và <span>xxx</span> ca tử vong.</p>`)
+    <p>- Tính đến ngày <span>${TimeData}</span> trải qua <span> ${DayWorld} </span> ngày cả thế giới ghi nhận <span id="worldcases"></span> ca nhiễm và <span id="worlddeath"></span> ca tử vong </p>
+    <p>- Ngày <span> 23/1/2020 Việt Nam</span> nghi nhận ca nhiễm đầu tiên <span>[${DayVN}] Ngày</span>.</p>
+    <p>- Ngày <span>8/5/2020 Nhật Bản</span> công bố ca nhiễm đầu tiên<span> [${DayJP}] Ngày</span>.</p>`)
 }
 
 // tiếng nhật
@@ -57,11 +48,6 @@ function japanes() {
     let Japannes = document.getElementById('japanes');
     Japannes.style.backgroundColor = 'rgb(59, 74, 96)';
     TiengViet.style.backgroundColor = '#b2bcc9';
-    //btn quốc gia
-    // let VietnamData = document.getElementById('vietnam-data');
-    // let JapanData = document.getElementById('japan-data');
-    // VietnamData.textContent = 'ベトナム国内';
-    // JapanData.textContent = '日本国内';
     // Số Ngày Nhiễm
     var day = Math.floor(((new Date().getTime()) - (new Date("jan 23,2020 00:00:00").getTime())) / (1000 * 60 * 60 * 24));
     let TimeDown = document.querySelector('.timedown');

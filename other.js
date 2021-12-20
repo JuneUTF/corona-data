@@ -61,3 +61,12 @@ function showapi() {
     document.getElementById('apivirut').style.display = 'block';
 
 }
+//random color 20057
+let colorName = ["red", "orange", "yellow", "lime", "green", "teal", "moccasin", "SlateBlue", "Coral", "MediumTurquoise", "Sienna", "snow"];
+let ColorLogo;
+setInterval(() => {
+    ColorLogo = colorName[Math.floor(Math.random() * colorName.length)];
+    document.getElementById('colorlogo').style.color = ColorLogo;
+    document.getElementById('logoweb').style.color = ColorLogo;
+    // console.log(ColorLogo);
+}, 2000)
