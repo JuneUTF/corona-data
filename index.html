@@ -354,27 +354,26 @@
     </div>
     <script src="https://corona.go.jp/dashboard/js/app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <div class="home__statistical">
+        <div class="container" id="topCovidStatistics"> </div>
+    </div>
     <div class="show-tt" id="apiweb">
         <div class="show-active">
             <h1 class="virut-data"></h1>
-            <button onclick="btndlt()"> X</button>
+            <button onclick="btndlt()"> <img src="close.svg" alt=""></button>
         </div>
         <div class="show-text text-virut">
+            <p class="world01"></p>
+            <p><span class="world-01 worldtxt"></span><span id="worldcases"></span><span class="world-02 worldtxt"></span><span id="worlddeath"></span><span class="world-03 worldtxt"></span></p>
+            <p class="world02"></p>
         </div>
     </div>
     <div class="show-tt" id="apivirut">
         <div class="show-active">
-            <div class="home__statistical">
-                <div class="container" id="topCovidStatistics"> </div>
-            </div>
             <h1 class="webs"></h1>
-            <button onclick="btndlt()"> X</button>
+            <button onclick="btndlt()"> <img src="close.svg" alt=""></button>
         </div>
         <div class="show-text text-web">
-            <p>- ngay <span>xxx</span>xx ghi nhan ca nhiem dau tien o ha nam trung quoc.</p>
-            <p>-tinh den ngay lll trai qua xx ngay the gioi ghi nhan tong cong xxx ca nhiem va xxx ca tu vong</p>
-            <p>-Ngay xxx nhat ban va viet nam deu cong bo ca nhiem moi dau tien trong nuoc</p>
-            <p>- tinh den ngay llltrai qua xxx ngay o nhat ghi nham 111 ca nhiem va 111 ca tu vong, trong ki viet nam laf 222 ca nhiem va 222 ca tu vong</p>
         </div>
     </div>
     <!-- === SCRIPT MAIN JS === -->
@@ -383,8 +382,8 @@
     <script src="mapdata.js"></script>
     <script src="countrymap.js"></script>
     <script src="other.js"></script>
-    <script src="langs.js"></script>
     <script src="apiworld.js"></script>
+    <script src="langs.js"></script>
 </body>
 
 </html>

@@ -32,7 +32,6 @@
             o = {};
 
         function r() {
-            var t = 1;
             return {
                 template: function(t) {
                     var e = "",
@@ -40,8 +39,10 @@
                     for (var n in a) {
                         var o = "";
                         let huynh = (a[n]);
-                        document.getElementById('worldcases').textContent = huynh.cases.toLocaleString("en-US");
-                        document.getElementById('worlddeath').textContent = huynh.death.toLocaleString("en-US");
+                        let casesworld = huynh.cases.toLocaleString("en-US");
+                        let deathworld = huynh.death.toLocaleString("en-US");
+                        document.getElementById("worldcases").textContent = casesworld;
+                        document.getElementById('worlddeath').textContent = deathworld;
                         var r = "en",
                             c = "";
                         "internal" == n && (r = "vi", c = "show"), e += o = '<div class="content-tab '.concat(c, '" id="').concat(r, '"><div class="home__statistical-list">').concat(o, "</div></div>")

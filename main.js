@@ -17,14 +17,14 @@ async function main() {
     document.getElementById("chetmoi").textContent = catuvong[6].quantity.toLocaleString("en-US");
     document.getElementById("chethqua").textContent = catuvong[5].quantity.toLocaleString("en-US");
     if ((canhiem[6].quantity - canhiem[5].quantity) > 0) {
-        document.getElementById("scnm").textContent = ("+") + (canhiem[6].quantity - canhiem[5].quantity);
-    } else { document.getElementById("scnm").textContent = (canhiem[6].quantity - canhiem[5].quantity) };
+        document.getElementById("scnm").textContent = ("+") + ((canhiem[6].quantity - canhiem[5].quantity)).toLocaleString("en-US");
+    } else { document.getElementById("scnm").textContent = ((canhiem[6].quantity - canhiem[5].quantity)).toLocaleString("en-US") };
     if ((cakhoi[6].quantity - cakhoi[5].quantity) > 0) {
-        document.getElementById("sckm").textContent = ("+") + (cakhoi[6].quantity - cakhoi[5].quantity);
-    } else { document.getElementById("sckm").textContent = (cakhoi[6].quantity - cakhoi[5].quantity) };
+        document.getElementById("sckm").textContent = ("+") + ((cakhoi[6].quantity - cakhoi[5].quantity)).toLocaleString("en-US");
+    } else { document.getElementById("sckm").textContent = ((cakhoi[6].quantity - cakhoi[5].quantity)).toLocaleString("en-US") };
     if ((catuvong[6].quantity - catuvong[5].quantity) > 0) {
-        document.getElementById("sccm").textContent = ("+") + (catuvong[6].quantity - catuvong[5].quantity);
-    } else { document.getElementById("sccm").textContent = (catuvong[6].quantity - catuvong[5].quantity) };
+        document.getElementById("sccm").textContent = ("+") + ((catuvong[6].quantity - catuvong[5].quantity)).toLocaleString("en-US");
+    } else { document.getElementById("sccm").textContent = ((catuvong[6].quantity - catuvong[5].quantity)).toLocaleString("en-US") };
 
     const { infected, treated, recovered, deceased, detail } = await (await getData()).data;
     createData(infected, treated, recovered, deceased);
