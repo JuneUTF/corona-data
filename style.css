@@ -265,6 +265,7 @@
      width: 100%;
      display: flex;
      position: relative;
+     overflow: hidden;
  }
  
  .header .country-map {
@@ -378,8 +379,8 @@
  
  .show-tt .show-active {
      display: flex;
-     height: 40px;
-     line-height: 40px;
+     height: 50px;
+     line-height: 50px;
      border-bottom: 2px solid #fff;
      position: relative;
      color: red;
@@ -390,17 +391,25 @@
      position: absolute;
      right: 0;
      font-size: 25px;
-     width: 38px;
-     height: 38px;
-     border-radius: none;
+     height: 100% !important;
+     line-height: 50px;
+     height: 50px;
+     width: 50px;
+     margin-bottom: 5px;
+     color: #b2bcc9;
+     background-color: none;
+     border: none;
+ }
+ 
+ .show-tt .show-active img {
+     width: 45px;
  }
  
  .show-tt .show-text {
-     padding: 15px;
+     padding: 1px;
      font-size: 18px;
      color: black;
      height: 80%;
-     overflow-y: auto;
  }
  
  .show-tt .show-text p {
@@ -423,6 +432,12 @@
  /* mobile */
  
  @media screen and (max-width:768px) {
+     .show-tt .show-tex {
+         overflow-y: scroll;
+     }
+     .table {
+         padding-right: 28px;
+     }
      .menu-data,
      .section,
      .table-data,
@@ -438,15 +453,19 @@
          position: absolute;
          bottom: 0%;
          right: 50%;
-         transform: translate(180px, -20px);
+         transform: translate(140px, -15px);
          text-align: center;
      }
      .hoangsa {
          position: absolute;
          top: 50%;
          right: 50%;
-         transform: translate(160px, 5px);
+         transform: translate(95px, 10px);
          text-align: center;
+     }
+     .hoangsa img,
+     .truongsa img {
+         height: 20px;
      }
      td1 {
          width: 260px !important;
@@ -464,6 +483,11 @@
      td1 {
          width: 100px;
      }
+ }
+ 
+ .country-map button,
+ .langs button {
+     color: yellow;
  }
  /* laptop */
  
@@ -503,6 +527,10 @@
      #colorlogo {
          color: blue;
      }
+     .country-map button,
+     .langs button {
+         color: yellow;
+     }
      #headermobile button,
      #headermobile .waviy {
          width: 100%;
@@ -517,12 +545,10 @@
          animation: active 0.5s forwards;
      }
      .show-tt {
-         padding: 10px 2px;
-         width: 85%;
+         width: 90%;
      }
      .show-tt .show-text {
          height: 80%;
-         overflow-y: scroll;
      }
      @keyframes active {
          0% {
@@ -597,8 +623,6 @@
      }
  }
  
- .huynh {}
- 
  .virut-data,
  .webs {
      background-color: #b2bcc9;
@@ -606,4 +630,163 @@
  
  .home__statistical {
      display: none;
+ }
+ /* CSS Loader */
+ 
+ #huynh {
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     position: fixed;
+     background-color: aqua;
+     z-index: 256;
+     animation-fill-mode: forwards;
+     animation-duration: 1s;
+ }
+ 
+ @keyframes closeloader {
+     0% {
+         opacity: 1;
+     }
+     100% {
+         opacity: 0;
+     }
+ }
+ 
+ #huynh .onloader {
+     position: absolute;
+     top: 50%;
+     right: 50%;
+     transform: translate(50%, -50%);
+ }
+ 
+ #huynh .onloader-name {
+     position: absolute;
+     bottom: 50%;
+     right: 50%;
+     transform: translate(50%, 50%);
+ }
+ /* CSS onloader*/
+ 
+ .onloader {
+     width: 100px;
+     height: 100px;
+     display: inline-block;
+     position: relative;
+ }
+ 
+ .onloader::after,
+ .onloader::before {
+     content: '';
+     box-sizing: border-box;
+     width: 100px;
+     height: 100px;
+     border: 2px solid #FFF;
+     position: absolute;
+     left: 0;
+     top: 0;
+     animation: rotation 2s ease-in-out infinite alternate;
+ }
+ 
+ .onloader::after {
+     border-color: #FF3D00;
+     animation-direction: alternate-reverse;
+ }
+ 
+ @keyframes rotation {
+     0% {
+         transform: rotate(0deg);
+     }
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+ 
+ .onloader-small {
+     width: 80px;
+     height: 80px;
+     display: inline-block;
+     position: relative;
+     border-width: 3px 2px 3px 2px;
+     border-style: solid dotted solid dotted;
+     border-color: #de3500 rgba(255, 255, 255, 0.3) #fff rgba(151, 107, 93, 0.3);
+     border-radius: 50%;
+     box-sizing: border-box;
+     animation: 2s rotate linear infinite;
+     margin-top: 10px;
+ }
+ 
+ .onloader-small:before,
+ .onloader-small:after {
+     content: '';
+     top: 0;
+     left: 0;
+     position: absolute;
+     border: 10px solid transparent;
+     border-bottom-color: #fff;
+     transform: translate(-6px, 45px) rotate(-35deg);
+ }
+ 
+ .onloader-small:after {
+     border-color: #de3500 #0000 #0000 #0000;
+     transform: translate(63px, 10px) rotate(-35deg);
+ }
+ 
+ @keyframes rotate {
+     100% {
+         transform: rotate(360deg)
+     }
+ }
+ 
+ .onloader-name {
+     color: blue;
+     display: inline-block;
+     font-family: Arial, Helvetica, sans-serif;
+     position: relative;
+ }
+ 
+ .onloader-name:before {
+     content: '';
+     animation: 2s print linear alternate infinite;
+ }
+ 
+ .onloader-name:after {
+     content: '';
+     position: absolute;
+     right: -4px;
+     top: 50%;
+     transform: translatey(-45%);
+     background: currentColor;
+     opacity: 1;
+     animation: 0.2s blink steps(2) infinite;
+ }
+ 
+ @keyframes blink {
+     0% {
+         visibility: hidden;
+     }
+     100% {
+         visibility: visible;
+     }
+ }
+ 
+ @keyframes print {
+     0% {
+         content: 'P'
+     }
+     20% {
+         content: 'PV'
+     }
+     40% {
+         content: 'PVH'
+     }
+     80% {
+         content: 'PVH.'
+     }
+     80% {
+         content: 'PVH..'
+     }
+     100% {
+         content: 'PVH...'
+     }
  }

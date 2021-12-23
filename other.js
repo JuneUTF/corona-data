@@ -65,8 +65,20 @@ function showapi() {
 let colorName = ["red", "orange", "yellow", "lime", "green", "teal", "moccasin", "SlateBlue", "Coral", "MediumTurquoise", "Sienna", "snow"];
 let ColorLogo;
 setInterval(() => {
+        ColorLogo = colorName[Math.floor(Math.random() * colorName.length)];
+        document.getElementById('colorlogo').style.color = ColorLogo;
+        document.getElementById('logoweb').style.color = ColorLogo;
+        // console.log(ColorLogo);
+    }, 2000)
+    // JS onloader
+let loader = document.getElementById('huynh');
+setTimeout(function() {
+    loader.style.animationName = 'closeloader'
+}, 3000)
+setTimeout(function() {
+    loader.style.display = 'none'
+}, 4000)
+setInterval(() => {
     ColorLogo = colorName[Math.floor(Math.random() * colorName.length)];
-    document.getElementById('colorlogo').style.color = ColorLogo;
-    document.getElementById('logoweb').style.color = ColorLogo;
-    // console.log(ColorLogo);
-}, 2000)
+    loader.style.backgroundColor = ColorLogo;
+}, 200);

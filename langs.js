@@ -89,7 +89,7 @@ function japanes() {
     langes('world02', `<p>- <span>2020年1月23日</span>に<span>ベトナムでは</span>最初の感染例が発見されました。<span>[${DayVN}] 日</span></p>
     <p>- <span>2020年8月5日</span>に<span>日本では</span>最初の感染例が発表されました。<span>[${DayJP}] 日</span></p>`)
     langes("text-web", `
-    <p>- <span><strong>Web API</strong></span> ( <span>Application Programming Interface</span> )とは、さまざまな<span>アプリケーション</span>アプリケーションがデータ<span>データ</span>をやり取りしたり交換したりできるようにするために使用される方法です。 Web APIによって返されるデータは、通常、<span>HTTP</span>または<span>HTTPS</span>プロトコルを介した<span>JSON</span>または<span>XM</span>L形式です。</span>.</p>
+    <p>- <span><strong>Web API</strong></span> ( <span>Application Programming Interface</span> )とは、さまざまな<span>アプリケーション</span>が<span>データ</span>をやり取りしたり交換したりできるようにするために使用される方法です。 Web APIによって返されるデータは、通常、<span>HTTP</span>または<span>HTTPS</span>プロトコルを介した<span>JSON</span>または<span>XM</span>L形式です。</span>.</p>
     <p>- ベトナム国内と世界の API は<span> <a href="https://covid19.gov.vn"target="_blank">https://covid19.gov.vn</a> </span> から取得されます、毎日<span>00:00</span>に自動的に更新されます。</p>
     <p>- 日本国内の API は<span><a href="https://corona.go.jp/"target="_blank">https://corona.go.jp/</a></span> から取得されます、が更新され次第更新されます。</p>
     - ベトナムの地図は<span> <a href="https://simplemaps.com/country/vn/"target="_blank">https://simplemaps.com/country/vn/</a> </span>で参照されています。`)

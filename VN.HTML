@@ -6,42 +6,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #huynh {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: fixed;
+            background-color: aqua;
+            z-index: 256;
+        }
+        
+        #huynh .onloader {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            background-color: aquamarine;
+        }
+        
+        #huynh .onloader-name {
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%, 50%);
+        }
+        /* CSS onloader*/
+        
+        .onloader {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .onloader::after,
+        .onloader::before {
+            content: '';
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #FFF;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: rotation 2s ease-in-out infinite alternate;
+        }
+        
+        .onloader::after {
+            border-color: #FF3D00;
+            animation-direction: alternate-reverse;
+        }
+        
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .onloader-small {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            position: relative;
+            border-width: 3px 2px 3px 2px;
+            border-style: solid dotted solid dotted;
+            border-color: #de3500 rgba(255, 255, 255, 0.3) #fff rgba(151, 107, 93, 0.3);
+            border-radius: 50%;
+            box-sizing: border-box;
+            animation: 2s rotate linear infinite;
+            margin-top: 10px;
+        }
+        
+        .onloader-small:before,
+        .onloader-small:after {
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            border: 10px solid transparent;
+            border-bottom-color: #fff;
+            transform: translate(-6px, 45px) rotate(-35deg);
+        }
+        
+        .onloader-small:after {
+            border-color: #de3500 #0000 #0000 #0000;
+            transform: translate(63px, 10px) rotate(-35deg);
+        }
+        
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        .onloader-name {
+            color: blue;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+        }
+        
+        .onloader-name:before {
+            content: '';
+            animation: 2s print linear alternate infinite;
+        }
+        
+        .onloader-name:after {
+            content: '';
+            position: absolute;
+            right: -4px;
+            top: 50%;
+            transform: translatey(-45%);
+            background: currentColor;
+            opacity: 1;
+            animation: 0.2s blink steps(2) infinite;
+        }
+        
+        @keyframes blink {
+            0% {
+                visibility: hidden;
+            }
+            100% {
+                visibility: visible;
+            }
+        }
+        
+        @keyframes print {
+            0% {
+                content: 'P'
+            }
+            20% {
+                content: 'PV'
+            }
+            40% {
+                content: 'PVH'
+            }
+            80% {
+                content: 'PVH.'
+            }
+            80% {
+                content: 'PVH..'
+            }
+            100% {
+                content: 'PVH...'
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="waviy" id="colorlogo">
-        <span style="--i:1">2</span>
-        <span style="--i:2">0</span>
-        <span style="--i:3">0</span>
-        <span style="--i:4">5</span>
-        <span style="--i:5">7</span>
-        <span style="--i:6">-</span>
-        <span style="--i:7">フ</span>
-        <span style="--i:8">ィ</span>
-        <span style="--i:9">ン</span>
-        <span style="--i:10">-</span>
-        <span style="--i:11">2</span>
-        <span style="--i:12">年</span>
-        <span style="--i:13">生</span>
-        <span style="--i:14">-</span>
-        <span style="--i:15">P</span>
-        <span style="--i:16">M</span>
+    <div id="huynh">
+        <div class="onloader">
+            <div class="onloader-small"></div>
+        </div>
+        <div class="onloader-name">
+        </div>
     </div>
-    <script>
-        let colorName = ["red", "orange", "yellow", "lime", "green", "teal", "moccasin", "SlateBlue", "Coral", "MediumTurquoise", "Sienna", "snow"];
-        let ColorLogo;
-        setInterval(() => {
-            ColorLogo = colorName[Math.floor(Math.random() * colorName.length)];
-            document.getElementById('colorlogo').style.color = ColorLogo;
-            console.log(ColorLogo);
-        }, 2000)
-    </script>
-    <style>
-        #colorlogo {
-            color: red;
-            animation-delay: 2s;
-        }
-    </style>
 </body>
 
 </html>
