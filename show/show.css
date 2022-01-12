@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+body {
+    justify-content: center;
+    justify-items: center;
+}
+
+#about {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(./huynh.jpg) no-repeat;
+}
+
+
+/* CSS name */
+
+#about #name {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    left: 30px;
+    display: inline-block;
+    line-height: 50px;
+}
+
+#about #nametitle {
+    position: absolute;
+    bottom: 90px;
+    font-size: 20px;
+    color: white;
+    width: 0px;
+    overflow: hidden;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-40%);
+}
+
+#about #name .named,
+#about #name .name {
+    width: 0px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.active-named {
+    animation: named 4s forwards ease;
+}
+
+.active-name {
+    animation: name 2s forwards ease;
+}
+
+.active-nametitle {
+    animation: nametitle 5s forwards ease;
+}
+
+@keyframes named {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 400px;
+    }
+}
+
+@keyframes name {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+@keyframes nametitle {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100vh;
+    }
+}
+
+#about #name div {
+    display: flex;
+}
+
+#web {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(./designer-developer.png) no-repeat;
+    display: none;
+}
+
+#web #end {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+}
+
+.frontback {
+    font-size: 25px;
+    line-height: 20px;
+    padding: 5px;
+    border-left: 3px solid red;
+    border-bottom: 3px solid red;
+    border-bottom-left-radius: 4px;
+    height: 30px;
+    margin-top: 10px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.fbend {
+    line-height: 30px;
+    font-size: 20px;
+    margin-left: 10px;
+    height: 30px;
+    width: 210px;
+    margin-top: 10px;
+    /* display: none ; */
+}
+
+.show-front {
+    height: 0;
+    overflow: hidden;
+}
+
+.showfront {
+    animation: showfront 5s forwards ease;
+}
+
+@keyframes showfront {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 170px;
+    }
+}
+
+.show-back {
+    height: 0;
+    overflow: hidden;
+}
+
+.showback {
+    animation: showback 5s forwards ease;
+}
+
+@keyframes showback {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 250px;
+    }
+}
+
+.active-web {
+    animation: 2s web forwards ease;
+}
+
+@keyframes web {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#html {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(./frontend.jpg) no-repeat;
+}
+
+#css {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(./html-css.jpeg) no-repeat;
+}
+
+#js {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(./php-mysql.jpg) no-repeat;
+}
+
+#responsive {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    background: url(./responsive.jpg) no-repeat;
+}
+
+#corona {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.waviy {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    display: inline-block;
+    font-size: 30px;
+    text-transform: uppercase;
+    animation: waviy 2s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-20px)
+    }
+}
