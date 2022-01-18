@@ -63,7 +63,7 @@ function japanes() {
     NameTitle[2].textContent = "死亡者数";
     NameTitle[3].textContent = "都道府県別累積の陽性者";
     NameTitle[4].textContent = "新型コロナウイルス感染症";
-    NameTitle[5].textContent = "死亡者数";
+    NameTitle[5].textContent = "入院者数";
     NameTitle[6].textContent = "死亡者数";
     NameTitle[7].textContent = "都道府県別累積の陽性者";
 
@@ -91,7 +91,7 @@ function japanes() {
     langes("text-web", `
     <p>- <span><strong>Web API</strong></span> ( <span>Application Programming Interface</span> )とは、さまざまな<span>アプリケーション</span>が<span>データ</span>をやり取りしたり交換したりできるようにするために使用される方法です。 Web APIによって返されるデータは、通常、<span>HTTP</span>または<span>HTTPS</span>プロトコルを介した<span>JSON</span>または<span>XM</span>L形式です。</span>.</p>
     <p>- ベトナム国内と世界の API は<span> <a href="https://covid19.gov.vn"target="_blank">https://covid19.gov.vn</a> </span> から取得されます、毎日<span>00:00</span>に自動的に更新されます。</p>
-    <p>- 日本国内の API は<span><a href="https://corona.go.jp/"target="_blank">https://corona.go.jp/</a></span> から取得されます、が更新され次第更新されます。</p>
+    <p>- 日本国内の API は<span><a href="https://corona.go.jp/"target="_blank">https://corona.go.jp/</a></span> から取得されますが更新され次第更新されます。</p>
     - ベトナムの地図は<span> <a href="https://simplemaps.com/country/vn/"target="_blank">https://simplemaps.com/country/vn/</a> </span>で参照されています。`)
 
 
